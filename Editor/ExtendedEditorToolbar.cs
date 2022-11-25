@@ -4,7 +4,7 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-namespace Editor
+namespace ExtendedEditorToolbar
 {
 	[InitializeOnLoad]
 	public static class ExtendedEditorToolbar

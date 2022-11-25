@@ -10,7 +10,7 @@ using UnityEngine.UIElements;
 using UnityEngine.Experimental.UIElements;
 #endif
 
-namespace Editor
+namespace ExtendedEditorToolbar
 {
 	public static class ExtendedToolbarCallback
 	{
