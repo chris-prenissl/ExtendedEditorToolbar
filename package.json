@@ -1,0 +1,13 @@
+{
+    "name": "com.celrage.extended-editor-toolbar",
+    "version": "0.1.0",
+    "displayName": "Extended Editor Toolbar",
+    "description": "Package for extending Unity's Editor Toolbar",
+    "unity": "2021.3",
+    "unityRelease": "5f1",
+    "author": {
+      "name": "Christoph Prenissl",
+      "email": "chris@celrage.com",
+      "url": "https://www.celrage.com"
+    }
+  }
