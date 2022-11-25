@@ -4,10 +4,10 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-namespace UnityToolbarExtender
+namespace Editor
 {
 	[InitializeOnLoad]
-	public static class ToolbarExtender
+	public static class ExtendedEditorToolbar
 	{
 		static int m_toolCount;
 		static GUIStyle m_commandStyle = null;
@@ -15,9 +15,9 @@ namespace UnityToolbarExtender
 		public static readonly List<Action> LeftToolbarGUI = new List<Action>();
 		public static readonly List<Action> RightToolbarGUI = new List<Action>();
 
-		static ToolbarExtender()
+		static ExtendedEditorToolbar()
 		{
-			Type toolbarType = typeof(Editor).Assembly.GetType("UnityEditor.Toolbar");
+			Type toolbarType = typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.Toolbar");
 			
 #if UNITY_2019_1_OR_NEWER
 			string fieldName = "k_ToolCount";
@@ -38,9 +38,9 @@ namespace UnityToolbarExtender
 			m_toolCount = toolIcons != null ? ((Array) toolIcons.GetValue(null)).Length : 5;
 #endif
 	
-			ToolbarCallback.OnToolbarGUI = OnGUI;
-			ToolbarCallback.OnToolbarGUILeft = GUILeft;
-			ToolbarCallback.OnToolbarGUIRight = GUIRight;
+			ExtendedToolbarCallback.OnToolbarGUI = OnGUI;
+			ExtendedToolbarCallback.OnToolbarGUILeft = GUILeft;
+			ExtendedToolbarCallback.OnToolbarGUIRight = GUIRight;
 		}
 
 #if UNITY_2019_3_OR_NEWER
