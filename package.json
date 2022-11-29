@@ -9,5 +9,14 @@
       "name": "Christoph Prenissl",
       "email": "chris@celrage.com",
       "url": "https://www.celrage.com"
+    },
+    "repository": 
+    { 
+      "type": "git", 
+      "url": "ssh://git@github.com:snakept/ExtendedEditorToolbar", 
+      "directory": "" 
+    },
+    "publishConfig": { 
+      "registry": "https://npm.pkg.github.com/@snakept" 
     }
   }
